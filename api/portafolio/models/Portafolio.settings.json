@@ -1,0 +1,26 @@
+{
+  "connection": "default",
+  "collectionName": "portafolio",
+  "info": {
+    "name": "portafolio",
+    "description": "Trabajos realizados y clientes"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "Titulo": {
+      "unique": true,
+      "required": true,
+      "type": "string"
+    },
+    "Descripcion": {
+      "type": "richtext"
+    }
+  }
+}
