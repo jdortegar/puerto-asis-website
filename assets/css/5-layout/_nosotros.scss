@@ -1,0 +1,112 @@
+.NosotrosPage {
+  background: url(/assets/img/img-background.jpg) no-repeat;
+  background-size: cover;
+  background-color: rgb(255, 255, 255);
+  background-color: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(220, 229, 239, 1) 35%);
+  overflow: hidden;
+
+  .Section-1 {
+    padding: 160px 0 50px;
+    color: #FFF;
+
+    @media (max-width: 768px) {
+      padding: 120px 0 50px;
+    }
+
+    .row {
+      @media (max-width: 768px) {
+        flex-direction: column-reverse;
+        margin: 0;
+      }
+    }
+
+    .col-lg-6 {
+      @media (max-width: 768px) {
+        padding: 0;
+        margin-bottom: 20px;
+      }
+    }
+
+    .pr-5 {
+      @media (max-width: 768px) {
+        padding: 0 50px;
+      }
+    }
+  }
+
+  .Section-2 {
+    padding: 0 0 100px;
+
+    @media (max-width: 768px) {
+      padding: 50px 20px;
+    }
+
+    .container {
+      padding: 0
+    }
+
+
+    .Section-2-column {
+      background: #ffbb4d;
+      padding: 30px;
+      min-height: 250px;
+      border-radius: 5px;
+
+      box-shadow: 1.5px 1.5px 5px rgba(0, 0, 0, 0.5);
+
+      h4 {
+        margin-bottom: 30px
+      }
+
+      p {
+        line-height: 1.3;
+      }
+    }
+  }
+
+  .Section-3 {
+    padding: 100px 0;
+
+    @media (max-width: 768px) {
+      padding: 50px 20px;
+    }
+
+    .caption {
+      margin: 10px 0;
+    }
+
+    h5 {
+      font-family: 'CeraPro', sans-serif;
+    }
+  }
+
+  .Section-4 {
+    padding: 100px 0;
+
+    @media (max-width: 768px) {
+      padding: 50px 20px;
+    }
+
+    .row {
+      @media (max-width: 768px) {
+        flex-direction: column-reverse;
+      }
+    }
+
+    h5 {
+      font-family: 'CeraPro', sans-serif;
+    }
+
+    .carousel-controls {
+      text-align: right;
+
+      @media (max-width: 768px) {
+        text-align: center;
+      }
+    }
+
+    .caption {
+      margin: 10px 0 0 8.33333%;
+    }
+  }
+}
