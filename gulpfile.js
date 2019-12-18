@@ -127,7 +127,7 @@ gulp.task('serve', function(done) {
   });
 
   gulp.watch('assets/css/**/*.scss', series('watchFiles'));
-  gulp.watch('*.html', browserSync.reload);
+  gulp.watch('*.html').on('change', browserSync.reload);
   done();
 });
 
