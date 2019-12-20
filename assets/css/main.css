@@ -9590,7 +9590,10 @@ a.active {
   .header .col-sm-2 {
     padding: 0; }
   .header .title-container {
-    padding-left: 2rem; }
+    padding-left: 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
     .header .title-container .title {
       font-family: starling, serif;
       font-weight: 700;
@@ -9639,6 +9642,36 @@ section {
   .Section-1 .ribbon-back {
     background: url(/assets/img/img-ribbon.png) center center;
     background-size: cover; }
+  .Section-1 .ribbon-container {
+    position: relative;
+    padding: 15% 12% 15% 18%; }
+    .Section-1 .ribbon-container .ribbon {
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+      z-index: 99; }
+    .Section-1 .ribbon-container h3 {
+      font-family: starling, serif;
+      z-index: 999;
+      position: relative;
+      font-size: 1.3725rem;
+      line-height: 2rem; }
+      .Section-1 .ribbon-container h3::before {
+        content: "";
+        position: absolute;
+        height: 3rem;
+        width: 2px;
+        background: #bc2e1a;
+        top: 50%;
+        left: -1.25rem;
+        -webkit-transform: translatey(-50%);
+                transform: translatey(-50%); }
+    .Section-1 .ribbon-container .firstLetter {
+      font-size: 1.75rem;
+      font-family: starling, serif; }
 
 .Section-2 {
   min-height: 100vh; }
@@ -9651,7 +9684,31 @@ section {
     padding: 0 1.5rem; }
 
 .Section-4 {
-  min-height: 100vh; }
+  min-height: 100vh;
+  /* remove spacing between middle columns */
+  /* remove right padding from first column */
+  /* remove left padding from first column */ }
+  .Section-4 .equipo-title {
+    position: relative;
+    margin-bottom: 3rem; }
+    .Section-4 .equipo-title hr {
+      width: 200px;
+      height: 1px;
+      background: #bc2e1a;
+      position: absolute;
+      left: 4.5rem;
+      top: 1.5rem; }
+  .Section-4 .row.no-gutter {
+    margin-bottom: 10px; }
+  .Section-4 .row.no-gutter [class*='col-']:not(:first-child):not(:last-child) {
+    padding-right: 5px;
+    padding-left: 5px; }
+  .Section-4 .row.no-gutter [class*='col-']:first-child {
+    padding-right: 5px;
+    padding-left: 5px; }
+  .Section-4 .row.no-gutter [class*='col-']:last-child {
+    padding-left: 5px;
+    padding-right: 5px; }
 
 .Section-5 {
   min-height: 100vh;
@@ -9682,7 +9739,7 @@ section {
     top: 50%; }
     .Section-6 .contact-box hr {
       width: 400px;
-      height: .04rem;
+      height: 1px;
       background: #bc2e1a; }
     .Section-6 .contact-box p {
       margin: 0 2rem;
