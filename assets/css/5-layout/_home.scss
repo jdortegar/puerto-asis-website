@@ -3,9 +3,13 @@ section {
 }
 
 .Section-1 {
+  display: flex;
+  width: 100%;
+  align-items: center;
   min-height: 85vh;
   background: url(/assets/img/img-section1-background.jpg) center center;
   background-size: cover;
+  padding-bottom: 0;
 
   .ribbon-back {
     background: url(/assets/img/img-ribbon.png) center center;
@@ -75,10 +79,60 @@ section {
     hr {
       width: 200px;
       height: 1px;
-      background: #bc2e1a;
+      background: $red-color;
       position: absolute;
       left: 4.5rem;
       top: 1.5rem;
+    }
+  }
+
+  .box-container {
+    .role {
+      position: absolute;
+      bottom: 1rem;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);
+      font-weight: 300;
+      color: #fff;
+      font-size: .9rem;
+      width: 80%;
+      text-shadow: 1px 1px #000;
+      display: none;
+
+      .name {
+        font-family: starling, serif;
+      }
+
+      a {
+        color: #fff
+      }
+    }
+
+    .bordered {
+      border: 1px solid $red-color;
+      padding: 1.2725rem 1rem;
+      font-weight: 300;
+
+      .serif {
+        font-family: starling, serif;
+      }
+
+      &:first-child {
+        margin-bottom: .5rem;
+      }
+    }
+
+    &:hover {
+      .role {
+        display: block;
+      }
+
+      img {
+        -webkit-filter: grayscale(100%);
+        /* Safari 6.0 - 9.0 */
+        filter: grayscale(100%);
+      }
     }
   }
 

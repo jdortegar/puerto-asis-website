@@ -9608,10 +9608,8 @@ a.active {
     width: 100%;
     background: #bc2e1a; }
 
-header {
-  height: 15vh; }
-  header .logo {
-    width: 15rem; }
+header .logo {
+  width: 15rem; }
 
 footer {
   background: #333333;
@@ -9636,9 +9634,17 @@ section {
   padding-bottom: 3rem; }
 
 .Section-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   min-height: 85vh;
   background: url(/assets/img/img-section1-background.jpg) center center;
-  background-size: cover; }
+  background-size: cover;
+  padding-bottom: 0; }
   .Section-1 .ribbon-back {
     background: url(/assets/img/img-ribbon.png) center center;
     background-size: cover; }
@@ -9698,6 +9704,36 @@ section {
       position: absolute;
       left: 4.5rem;
       top: 1.5rem; }
+  .Section-4 .box-container .role {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    font-weight: 300;
+    color: #fff;
+    font-size: .9rem;
+    width: 80%;
+    text-shadow: 1px 1px #000;
+    display: none; }
+    .Section-4 .box-container .role .name {
+      font-family: starling, serif; }
+    .Section-4 .box-container .role a {
+      color: #fff; }
+  .Section-4 .box-container .bordered {
+    border: 1px solid #bc2e1a;
+    padding: 1.2725rem 1rem;
+    font-weight: 300; }
+    .Section-4 .box-container .bordered .serif {
+      font-family: starling, serif; }
+    .Section-4 .box-container .bordered:first-child {
+      margin-bottom: .5rem; }
+  .Section-4 .box-container:hover .role {
+    display: block; }
+  .Section-4 .box-container:hover img {
+    -webkit-filter: grayscale(100%);
+    /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%); }
   .Section-4 .row.no-gutter {
     margin-bottom: 10px; }
   .Section-4 .row.no-gutter [class*='col-']:not(:first-child):not(:last-child) {
