@@ -21,7 +21,7 @@ gulp.task('concatScripts', function() {
       'assets/js/vendor/jquery-3.3.1.min.js',
       'assets/js/vendor/popper.min.js',
       'assets/js/vendor/bootstrap.min.js',
-      'assets/js/vendor/owl.carousel.min.js',
+      'assets/js/vendor/slick.js',
     ])
     .pipe(maps.init())
     .pipe(concat('main.js'))
@@ -70,9 +70,10 @@ gulp.task('minifyImages', function() {
     .pipe(gulp.dest('docs/assets/img'));
 });
 
-gulp.task('watchFiles', function() {
-  gulp.watch('assets/css/**/*.scss', series('compileSass'));
-  gulp.watch('assets/js/*.js', series('concatScripts'));
+gulp.task('watchFiles', function(done) {
+  gulp.watch('assets/css/**/*.scss', gulp.series('compileSass'));
+  gulp.watch('assets/js/theme.js', gulp.series('concatScripts'));
+  done();
 });
 
 gulp.task('browser-sync', function() {
@@ -121,15 +122,17 @@ gulp.task(
   })
 );
 
-gulp.task('serve', function(done) {
-  browserSync.init({
-    server: './',
-  });
+gulp.task(
+  'serve',
+  gulp.series('watchFiles', function() {
+    browserSync.init({
+      server: './',
+    });
 
-  gulp.watch('assets/css/**/*.scss', series('watchFiles'));
-  gulp.watch('*.html').on('change', browserSync.reload);
-  done();
-});
+    gulp.watch('assets/css/**/*.scss', series('watchFiles'));
+    gulp.watch('*.html').on('change', browserSync.reload);
+  })
+);
 
 gulp.task(
   'default',

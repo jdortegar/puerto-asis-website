@@ -57,6 +57,76 @@ section {
 
 .Section-2 {
   min-height: 100vh;
+
+  .slick-track {
+    display: flex;
+  }
+
+  .slick-track .slick-slide {
+    display: flex;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container-carousel {
+    width: 80%;
+    margin: auto;
+  }
+
+  .slick-center {
+    .trayectoria-box {
+      padding: 3rem;
+      margin: 1rem;
+      margin-top: 0;
+    }
+  }
+
+  .slick-arrow {
+    width: 3rem;
+    position: absolute;
+    top: 50%;
+
+    transform: translate(0, -50%);
+
+    &.prevArrow {
+      left: -5rem;
+    }
+
+    &.nextArrow {
+      img {
+        transform: rotate(180deg);
+      }
+
+      right: -5rem;
+    }
+  }
+
+  .trayectoria-box {
+    padding: 1rem;
+    background: #f4f4f4;
+    margin: 1rem;
+    box-shadow: 2px 2px 10px #2323237a;
+
+    .text-container {
+      h1 {
+        font-family: starling, serif;
+        font-size: 1.75rem;
+        font-weight: 700;
+      }
+
+      hr {
+        background: #bc2e1a;
+        height: 1px;
+        width: 90%;
+        margin-left: 0;
+      }
+
+      p {
+        font-weight: 300;
+      }
+    }
+  }
 }
 
 .Section-3 {
@@ -165,10 +235,126 @@ section {
 .Section-5 {
   min-height: 100vh;
   background: $gray-color;
+
+  .slick-track {
+    display: flex;
+  }
+
+  .container-carousel {
+    width: 100%;
+    margin: auto;
+    position: relative;
+    padding-bottom: 5rem;
+
+    .slick-list {
+      padding: 1rem !important;
+    }
+
+    .carousel-position {
+      position: absolute;
+      bottom: 0;
+      right: 20%;
+      font-family: starling, serif;
+      font-size: 1.5rem;
+      display: flex;
+      align-items: center;
+
+      span,
+      sub {
+        font-family: starling, serif;
+      }
+
+      .arrow-icon {
+        width: 2rem;
+        margin: .25rem;
+
+        &.reverse {
+          transform: rotate(180deg);
+        }
+      }
+
+      .first-number {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  .slick-track .slick-slide {
+    display: flex;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .slick-arrow {
+
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    display: flex;
+    height: 15rem;
+    width: 8rem;
+    padding: 2.5rem;
+    z-index: 999;
+
+    &.prevArrow {
+      left: 0rem;
+      background: url(/assets/img/carousel-arrow-left-bg.jpg) no-repeat center center;
+      background-size: cover;
+      box-shadow: 4px 4px 7px #2323237a;
+    }
+
+    &.nextArrow {
+      img {
+        transform: rotate(180deg);
+      }
+
+      background: url(/assets/img/carousel-arrow-right-bg.jpg) no-repeat center center;
+      background-size: cover;
+      right: 0rem;
+      box-shadow: -4px 4px 7px #2323237a;
+    }
+  }
+
+  .trayectoria-box {
+    display: flex;
+    margin: auto;
+    padding: 0 20%;
+    align-items: center;
+
+    .imagen-container {
+      width: 60%;
+      padding: 1.5rem 0 1.5rem 1.5rem;
+    }
+
+    .text-container {
+      background: $gray-color;
+      width: 40%;
+      padding: 1rem 3rem;
+      box-shadow: 4px 4px 7px #2323237a;
+
+      h1 {
+        font-family: starling, serif;
+        font-size: 4rem;
+        font-weight: 700;
+
+      }
+
+      hr {
+        background: $red-color;
+        height: 1px;
+        width: 100%;
+      }
+
+      p {
+        font-weight: 300;
+      }
+    }
+  }
 }
 
 .Section-6 {
-  min-height: 100vh;
+  min-height: 50vh;
   padding-bottom: 0;
 
   .row {
@@ -177,7 +363,7 @@ section {
 
   #map {
     width: 100%;
-    height: 100vh;
+    height: 80vh;
   }
 
   .contact-box {

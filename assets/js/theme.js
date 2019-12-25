@@ -1,31 +1,28 @@
 $(document).ready(function() {
   // Get started!
   var _this = this;
+
   /*
-   * Include function
+   * Smooth scroll
    */
 
-  $(function() {
-    var includes = $('[data-include]');
-    jQuery.each(includes, function() {
-      var file = $(this).data('include') + '.html';
-      $(this).load(file, function() {
-        /*
-         * To up button
-         */
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
 
-        $('.UpButton').on('click', function() {
-          document.body.scrollTop = 0; // For Safari
-          document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-        });
-
-        // get current URL path and assign 'active' class
-        var pathname = window.location.pathname;
-        $('.navbar-nav a[href="' + pathname + '"]').addClass('active');
-
-        convertImages();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth',
       });
     });
+  });
+
+  /*
+   * To up button
+   */
+
+  $('.UpButton').on('click', function() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
   });
 
   const convertImages = function() {
@@ -76,150 +73,104 @@ $(document).ready(function() {
       );
     });
   };
+
+  convertImages();
   /*
    * Menu background
    */
 
   $(window).scroll(function() {
     if ($(window).scrollTop() > 50) {
-      $('.Pinatedo-menu').addClass('Pinatedo-menu-dark');
-      $('.Footer-sticky-menu').addClass('fadeInFx');
     } else {
-      $('.Pinatedo-menu').removeClass('Pinatedo-menu-dark');
-      $('.Footer-sticky-menu').removeClass('fadeInFx');
     }
   });
 
   /*
-   * Servicios elements
+   * Call slick carousel
    */
 
-  $('.servicios-container a').each(function() {
-    $(this).on('click', function() {
-      var element = $(this);
-      var imageSrc = element.data('image');
-      $('.service-image').fadeOut(100, function() {
-        $(this).attr('src', `assets/img/${imageSrc}.jpg`);
-        $(this).fadeIn(300);
-      });
-
-      // Scroll to element
-
-      if ($(window).width() < 768) {
-        $('html, body').animate(
-          {
-            scrollTop:
-              $('.Section-3').offset().top - $('.Pinatedo-menu').height(),
-          },
-          500
-        );
-      }
-    });
-  });
-
-  /*
-   * Content for modals
-   */
-
-  $('.openPopup').on('click', function() {
-    var dataURL = $(this).data('content');
-    $('.modal-body').load(dataURL, function() {
-      $('#TallerModal').modal({ show: true });
-      // Load images for Palmira
-      $('#carouselPalmira').on('slide.bs.carousel', function() {
-        $('.videoElement').each(function() {
-          $(this)
-            .get(0)
-            .pause();
-        });
-      });
-
-      $('#TallerModal').on('hidden.bs.modal', function(e) {
-        // do something...
-        $('.videoElement').each(function() {
-          $(this)
-            .get(0)
-            .pause();
-        });
-      });
-    });
-  });
-
-  /*
-   * Hide Images on Desktop
-   */
-
-  const removeImages = () => {
-    if ($(window).width() > 768) {
-      $('#carousel-thumb .hide-on-desktop')
-        .removeClass('carousel-item active')
-        .addClass('d-none');
-
-      $('#carousel-thumb .carousel-item').removeClass('active');
-      $('#carousel-thumb .carousel-item:first').addClass('active');
-    } else {
-      $('#carousel-thumb .hide-on-desktop')
-        .removeClass('d-none')
-        .addClass('carousel-item');
-    }
-
-    var height = $('#carousel-thumb .carousel-item').height();
-    $('#carousel-thumb .carousel-item').css({ minHeight: height });
-  };
-
-  removeImages();
-
-  $(window).resize(function() {
-    removeImages();
-  });
-  /*
-   * Call owl carousel
-   */
-
-  $('.owl-carousel').owlCarousel({
-    loop: true,
-    center: true,
-    dots: false,
-    nav: true,
-    margin: 40,
-    navText: [
-      '<i class="fa fa-angle-left" aria-hidden="true"></i>',
-      '<i class="fa fa-angle-right" aria-hidden="true"></i>',
+  $('.slick-carousel-portafolio').slick({
+    centerMode: true,
+    centerPadding: '0px',
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    touchMove: false,
+    arrows: true,
+    prevArrow:
+      '<div class="prevArrow slick-arrow"><img src="../assets/img/carousel-arrow.svg" class="img-fluid"/></div>',
+    nextArrow:
+      '<div class="nextArrow slick-arrow"><img src="../assets/img/carousel-arrow.svg" class="img-fluid"/></div>',
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: '0px',
+          slidesToShow: 1,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: '0px',
+          slidesToShow: 1,
+        },
+      },
     ],
+  });
 
-    responsive: {
-      0: {
-        items: 1,
+  $('.slick-carousel-trayectoria').slick({
+    centerMode: true,
+    centerPadding: '0px',
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    touchMove: false,
+    arrows: true,
+    prevArrow:
+      '<div class="prevArrow slick-arrow"><img src="../assets/img/carousel-arrow.svg" class="img-fluid"/></div>',
+    nextArrow:
+      '<div class="nextArrow slick-arrow"><img src="../assets/img/carousel-arrow.svg" class="img-fluid"/></div>',
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: '0px',
+          slidesToShow: 1,
+        },
       },
-      600: {
-        items: 3,
+      {
+        breakpoint: 480,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: '0px',
+          slidesToShow: 1,
+        },
       },
-      1000: {
-        items: 5,
-      },
-    },
+    ],
   });
 
   /*
-   * Fade on scroll
+   * Carousel indicator
    */
 
-  $(window).scroll(function() {
-    // onScroll functions
+  $('.carousel-lenght').html(
+    $('.slick-carousel-trayectoria .slick-slide:not(.slick-cloned)').length
+  );
 
-    var scroll = $(window).scrollTop();
-
-    /* Check the location of each desired element */
-    $('.animation-scroll').each(function() {
-      var bottom_of_object = $(this).position().top;
-      var bottom_of_window = $(window).scrollTop() + $(window).height();
-
-      /* If the object is completely visible in the window, fade it it */
-      if (bottom_of_window > bottom_of_object) {
-        $(this).animate({ opacity: '1' }, 1500);
-        $(this).addClass('come-in');
-      }
-    });
+  $('.slick-arrow').on('click', function() {
+    $('.first-number').html(
+      Number(
+        $('.slick-carousel-trayectoria  .slick-slide.slick-active').data(
+          'slick-index'
+        )
+      ) + 1
+    );
   });
 
   /*
