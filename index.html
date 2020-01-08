@@ -79,9 +79,9 @@
           <div class="col-sm-6 ">
             <div class="ribbon-container">
               <img src="./assets/img/img-ribbon.png" alt="" class="img-fluid ribbon">
-              <h3><span class="firstLetter">N</span>egocios con renta y con propósito. Es nuestra manera de
+              <h3><span class="firstLetter">N</span>egocios con renta y con propósito.<br> Es nuestra manera de
                 contribuir<br>
-                a una economía competitiva, responsable y equitativa.</h3>
+                a una economía competitiva,<br> responsable y equitativa.</h3>
             </div>
           </div>
         </div>
@@ -558,8 +558,12 @@
   <!--  Google Maps API  -->
   <script>
     var map;
+
     function initMap() {
-      var ubication = { lat: -34.538051, lng: -58.465742 };
+      var ubication = {
+        lat: -34.538051,
+        lng: -58.465742
+      };
       map = new google.maps.Map(document.getElementById('map'), {
         center: ubication,
         disableDefaultUI: true,

@@ -72,6 +72,8 @@ section {
   .container-carousel {
     width: 80%;
     margin: auto;
+    display: flex;
+    align-items: center;
   }
 
   .slick-center {
