@@ -150,6 +150,11 @@ section {
 
   .text-container {
     padding: 0 1.5rem;
+
+    @media (max-width:768px) {
+      padding: 0;
+
+    }
   }
 }
 
@@ -224,7 +229,7 @@ section {
     margin-bottom: 10px;
 
     @media (max-width:768px) {
-      margin: 40px;
+      display: table-row;
     }
   }
 

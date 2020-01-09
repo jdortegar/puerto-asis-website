@@ -9707,6 +9707,9 @@ section {
     margin-bottom: 20px; }
   .Section-3 .text-container {
     padding: 0 1.5rem; }
+    @media (max-width: 768px) {
+      .Section-3 .text-container {
+        padding: 0; } }
 
 .Section-4 {
   min-height: 100vh;
@@ -9757,7 +9760,7 @@ section {
     margin-bottom: 10px; }
     @media (max-width: 768px) {
       .Section-4 .row.no-gutter {
-        margin: 40px; } }
+        display: table-row; } }
   .Section-4 .row.no-gutter [class*='col-']:not(:first-child):not(:last-child) {
     padding-right: 5px;
     padding-left: 5px; }
