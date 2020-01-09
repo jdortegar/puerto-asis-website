@@ -84,6 +84,9 @@ section {
       font-size: 1.75rem;
       line-height: 2rem;
 
+      @media screen and (max-width: 1868px) {
+        font-size: 1.5rem;
+      }
 
     }
 
@@ -162,6 +165,11 @@ section {
     width: 425px;
     position: relative;
 
+    @media screen and (max-width: 1868px) {
+      min-height: 350px;
+      width: 350px;
+    }
+
     .text-container {
       position: absolute;
       top: 50%;
@@ -185,6 +193,10 @@ section {
       p {
         font-weight: 300;
         font-size: 1.25rem;
+
+        @media screen and (max-width: 1868px) {
+          font-size: 1rem;
+        }
       }
     }
   }

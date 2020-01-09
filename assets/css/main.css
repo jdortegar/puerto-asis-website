@@ -9579,7 +9579,7 @@ header .main-navigation {
     padding-right: 1.25em !important;
     padding-left: 1.25rem !important;
     font-size: 1.5625rem; }
-    @media screen and (max-width: 1366px) {
+    @media screen and (max-width: 1868px) {
       header .main-navigation .nav-link {
         font-size: 1rem; } }
 
@@ -9674,6 +9674,9 @@ section {
       position: relative;
       font-size: 1.75rem;
       line-height: 2rem; }
+      @media screen and (max-width: 1868px) {
+        .Section-1 .ribbon-container h3 {
+          font-size: 1.5rem; } }
     .Section-1 .ribbon-container .firstLetter {
       font-size: 1.75rem;
       font-family: starling, serif; }
@@ -9735,6 +9738,10 @@ section {
     min-height: 425px;
     width: 425px;
     position: relative; }
+    @media screen and (max-width: 1868px) {
+      .Section-2 .trayectoria-box {
+        min-height: 350px;
+        width: 350px; } }
     .Section-2 .trayectoria-box .text-container {
       position: absolute;
       top: 50%;
@@ -9754,6 +9761,9 @@ section {
       .Section-2 .trayectoria-box .text-container p {
         font-weight: 300;
         font-size: 1.25rem; }
+        @media screen and (max-width: 1868px) {
+          .Section-2 .trayectoria-box .text-container p {
+            font-size: 1rem; } }
 
 .Section-3 {
   min-height: 100vh;
