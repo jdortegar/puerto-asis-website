@@ -9581,7 +9581,7 @@ header .main-navigation {
     font-size: 1.5625rem; }
     @media screen and (max-width: 1868px) {
       header .main-navigation .nav-link {
-        font-size: 1rem; } }
+        font-size: 1.2rem; } }
 
 header .logo {
   width: 20rem; }
