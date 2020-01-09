@@ -1,6 +1,23 @@
 header {
 
+  .main-navigation {
+    min-height: 80px;
+    background: #fff;
+    padding: 20px 7%;
+
+    .nav-link {
+      padding-right: 1.25em !important;
+      padding-left: 1.25rem !important;
+      font-size: 1.5625rem;
+
+      @media screen and (max-width: 1868px) {
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+
   .logo {
-    width: 15rem;
+    width: 20rem;
   }
 }
