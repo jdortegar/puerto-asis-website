@@ -234,6 +234,19 @@ section {
     position: relative;
     height: 100%;
 
+    .external-directors{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background: #000;
+    color: #fff;
+    font-size: 1.25rem;
+    font-family: starling, serif;
+    font-weight: 700;
+    }
+
     &.inverted {
       display: flex;
       justify-content: space-between;
@@ -243,15 +256,11 @@ section {
     .hover-content {
       display: none;
       position: absolute;
-      background: #000;
-      color: #fff;
       width: 100%;
       height: 100%;
       align-items: center;
       justify-content: center;
-      font-size: 1.25rem;
-      font-family: starling, serif;
-      font-weight: 700;
+      background: #fff;
     }
 
     .role {
@@ -302,7 +311,7 @@ section {
       }
 
       .hover-content {
-        display: flex;
+        display: block;
       }
     }
   }

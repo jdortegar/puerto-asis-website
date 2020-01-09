@@ -9790,6 +9790,23 @@ section {
   .Section-4 .box-container {
     position: relative;
     height: 100%; }
+    .Section-4 .box-container .external-directors {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      width: 100%;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      height: 100%;
+      background: #000;
+      color: #fff;
+      font-size: 1.25rem;
+      font-family: starling, serif;
+      font-weight: 700; }
     .Section-4 .box-container.inverted {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -9804,8 +9821,6 @@ section {
     .Section-4 .box-container .hover-content {
       display: none;
       position: absolute;
-      background: #000;
-      color: #fff;
       width: 100%;
       height: 100%;
       -webkit-box-align: center;
@@ -9814,9 +9829,7 @@ section {
       -webkit-box-pack: center;
           -ms-flex-pack: center;
               justify-content: center;
-      font-size: 1.25rem;
-      font-family: starling, serif;
-      font-weight: 700; }
+      background: #fff; }
     .Section-4 .box-container .role {
       position: absolute;
       bottom: 1rem;
@@ -9848,9 +9861,7 @@ section {
     .Section-4 .box-container:hover .role {
       display: block; }
     .Section-4 .box-container:hover .hover-content {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex; }
+      display: block; }
   .Section-4 .row.no-gutter {
     margin-bottom: 10px; }
   .Section-4 .row.no-gutter [class*='col-']:not(:first-child):not(:last-child) {
