@@ -17,11 +17,11 @@
 
 </head>
 
-<body>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
 
   <header>
-    <nav class="navbar navbar-expand-lg main-navigation">
-      <div class="container">
+    <nav class="navbar navbar-expand-lg main-navigation fixed-top">
+      <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler01"
           aria-controls="navbarToggler01" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon">
@@ -34,7 +34,7 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarToggler01">
           <ul class="navbar-nav  mt-2 mt-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" href="#home">Home
+              <a class="nav-link" href="#home">Home
                 <span class="sr-only">(current)</span>
               </a>
             </li>
@@ -70,15 +70,30 @@
     <!-- Section 1  -->
 
     <section class="Section-1" id="home">
-      <div class="container">
+      <div class="container-fluid container-wrapper">
         <div class="row align-items-center">
           <div class="col-sm-6"><img src="./assets/img/img-section1-letters.png" alt="" class="img-fluid"></div>
           <div class="col-sm-6 ">
             <div class="ribbon-container">
               <img src="./assets/img/img-ribbon.png" alt="" class="img-fluid ribbon">
-              <h3><span class="firstLetter">N</span>egocios con renta y con propósito. Es nuestra manera de
-                contribuir<br>
-                a una economía competitiva, responsable y equitativa.</h3>
+              <div id="section1Carousel" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li data-target="#section1Carousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#section1Carousel" data-slide-to="1"></li>
+                </ol>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <h3><span class="firstLetter">N</span>egocios con renta y con propósito.<br /> Es nuestra manera de
+                      contribuir<br>
+                      a una economía competitiva, <br />responsable y equitativa.</h3>
+                  </div>
+                  <div class="carousel-item">
+                    <h3><span class="firstLetter">N</span>egocios con renta y con propósito.<br /> Es nuestra manera de
+                      contribuir<br>
+                      a una economía competitiva, <br />responsable y equitativa.</h3>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -184,7 +199,7 @@
         </div>
       </div>
 
-      <div class="container">
+      <div class="container  center-content">
         <div class="row">
           <div class="col-sm-5 offset-sm-2">
             <div class="text-container">
@@ -315,7 +330,10 @@
                 </div>
               </div>
               <div class="col-sm-3">
-                <div class="box-container">
+                <div class="box-container inverted">
+                  <div class="hover-content">
+                    Directores<br />Externos
+                  </div>
                   <div class="bordered">
                     <div class="font-weight-bold serif">Fabián Kon</div>
                     <div class="small">Director</div>
@@ -341,7 +359,7 @@
           </div>
           <div class="col-sm-8">
             <div class="title-container">
-              <img src="./img/icn-puerto.png" alt="">
+              <img src="./assets/img/icn-puerto.png" alt="">
               <h3 class="title">Trayectoria</h3>
             </div>
           </div>
@@ -354,6 +372,7 @@
 
 
       <div class="container-carousel">
+
         <div class="slick-carousel-trayectoria">
           <!-- SLIDE STARTS -->
           <div class="slick-box">
