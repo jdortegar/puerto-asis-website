@@ -9847,8 +9847,8 @@ section {
               flex-direction: column; }
       @media (max-width: 768px) {
         .Section-4 .box-container.inverted {
-          padding-left: 60px;
-          width: 306px; } }
+          padding-left: 62px;
+          width: 300px; } }
     .Section-4 .box-container .hover-content {
       display: none;
       position: absolute;
@@ -9861,6 +9861,23 @@ section {
           -ms-flex-pack: center;
               justify-content: center;
       background: #fff; }
+    .Section-4 .box-container .external-directors {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      width: 100%;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      height: 100%;
+      background: #000;
+      color: #fff;
+      font-size: 1.25rem;
+      font-family: starling, serif;
+      font-weight: 700; }
     .Section-4 .box-container .role {
       position: absolute;
       bottom: 1rem;
@@ -10045,10 +10062,21 @@ section {
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
     top: 50%; }
+    @media (max-width: 768px) {
+      .Section-6 .contact-box {
+        position: relative;
+        -webkit-transform: none;
+                transform: none;
+        left: 0%;
+        padding: 3rem 1rem 3rem;
+        text-align: center; } }
     .Section-6 .contact-box hr {
       width: 400px;
       height: 1px;
       background: #bc2e1a; }
+      @media (max-width: 768px) {
+        .Section-6 .contact-box hr {
+          width: 350px; } }
     .Section-6 .contact-box p {
       margin: 0 2rem;
       font-size: 1.5rem;

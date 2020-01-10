@@ -273,22 +273,8 @@ section {
     position: relative;
     height: 100%;
 
-<<<<<<< HEAD
     @media (max-width:768px) {
       margin-top: 20px;
-=======
-    .external-directors{
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    background: #000;
-    color: #fff;
-    font-size: 1.25rem;
-    font-family: starling, serif;
-    font-weight: 700;
->>>>>>> development
     }
 
     &.inverted {
@@ -297,8 +283,8 @@ section {
       flex-direction: column;
 
       @media (max-width:768px) {
-        padding-left: 60px;
-        width: 306px;
+        padding-left: 62px;
+        width: 300px;
       }
     }
 
@@ -310,6 +296,19 @@ section {
       align-items: center;
       justify-content: center;
       background: #fff;
+    }
+
+    .external-directors {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      background: #000;
+      color: #fff;
+      font-size: 1.25rem;
+      font-family: starling, serif;
+      font-weight: 700
     }
 
     .role {
@@ -543,10 +542,22 @@ section {
     transform: translate(-50%, -50%);
     top: 50%;
 
+    @media (max-width:768px) {
+      position: relative;
+      transform: none;
+      left: 0%;
+      padding: 3rem 1rem 3rem;
+      text-align: center;
+    }
+
     hr {
       width: 400px;
       height: 1px;
       background: $red-color;
+
+      @media (max-width:768px) {
+        width: 350px;
+      }
     }
 
     p {
