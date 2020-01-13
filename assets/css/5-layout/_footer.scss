@@ -3,10 +3,23 @@ footer {
   color: #fff;
   padding: 3.125rem;
 
+  .row-footer {
+    @media (max-width:768px) {
+      display: contents;
+      text-align: center;
+      font-size: 18px;
+    }
+
+  }
+
   .footer-list-links {
     list-style: none;
     margin: 0;
     padding: 0;
+
+    @media (max-width:768px) {
+      margin-bottom: 10px;
+    }
 
     li {
       a {
@@ -28,5 +41,9 @@ footer {
 
   .footer-link {
     width: 2rem;
+
+    @media (max-width:768px) {
+      margin-top: 30px;
+    }
   }
 }

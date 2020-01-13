@@ -102,21 +102,21 @@ $(document).ready(function() {
       '<div class="nextArrow slick-arrow"><img src="./assets/img/carousel-arrow.svg" class="img-fluid"/></div>',
     responsive: [
       {
-        breakpoint: 768,
+        breakpoint: 990,
         settings: {
-          arrows: false,
+          arrows: true,
           centerMode: true,
           centerPadding: '0px',
           slidesToShow: 1,
         },
       },
       {
-        breakpoint: 480,
-        settings: {
-          arrows: false,
+        breakpoint: 1366,
+        settings: {         
+          slidesToShow: 2,
+          arrows: true,
           centerMode: true,
           centerPadding: '0px',
-          slidesToShow: 1,
         },
       },
     ],
@@ -135,23 +135,14 @@ $(document).ready(function() {
       '<div class="nextArrow slick-arrow"><img src="./assets/img/carousel-arrow.svg" class="img-fluid"/></div>',
     responsive: [
       {
-        breakpoint: 768,
+        breakpoint: 990,
         settings: {
           arrows: false,
           centerMode: true,
           centerPadding: '0px',
           slidesToShow: 1,
         },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          arrows: false,
-          centerMode: true,
-          centerPadding: '0px',
-          slidesToShow: 1,
-        },
-      },
+      }
     ],
   });
 
