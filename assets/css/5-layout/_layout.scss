@@ -67,7 +67,7 @@ a.active {
   padding: 4rem 15px;
   align-items: center;
 
-  @media (max-width:768px) {
+  @media (max-width:990px) {
     padding: 2rem 15px;
   }
 
@@ -80,17 +80,26 @@ a.active {
     padding-left: 2rem;
     display: flex;
 
+    @media (max-width:990px) {
+      padding-left: 0;
+      align-items: center;
+      justify-content: center;
+    }
+
     .title {
       font-family: starling, serif;
       font-weight: 700;
       font-style: normal;
       color: $red-color;
       margin-left: 1rem;
-      font-size: 2rem
+      font-size: 2rem;
+      @media (max-width:990px) {
+        font-size: 1.25rem;
+      }
     }
 
     img {
-      width: 6rem;
+      max-width: 6rem;
     }
   }
 
@@ -113,4 +122,18 @@ p {
   p {
     font-size: 1rem;
   }
+
+  .side-border-container{
+    width: 10%;
+  }
+  .title-container-width{
+    width: 80%;
+  }
+}
+
+@media (min-width:990px){
+
+.hide-desktop{
+  display: none;
+}
 }
