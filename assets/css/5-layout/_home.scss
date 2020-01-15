@@ -501,8 +501,8 @@ section {
 
     .carousel-position {
       position: absolute;
-      bottom: 100px;
-      right: 20%;
+      bottom: 35px;
+      right: 30%;
       font-family: starling, serif;
       font-size: 1.5rem;
       display: flex;
@@ -514,7 +514,8 @@ section {
 
       @media (max-width:990px) {
         bottom: initial;
-        transform: translateX(-50%);
+        right: 50%;
+        transform: translateX(50%);
       }
 
       span,
@@ -545,6 +546,10 @@ section {
     @media (max-width:990px) {
       padding: 30px;
     }
+  }
+
+  .slick-box{
+    padding: 0 130px;
   }
 
   .slick-arrow {
@@ -580,9 +585,10 @@ section {
   .trayectoria-box {
     display: flex;
     margin: auto;
-    padding: 0 20%;
+    padding: 0;
     align-items: center;
-
+    justify-content: center;
+    transform: translateX(-25px);
     p{
       font-size: 1rem;
     }
@@ -601,10 +607,11 @@ section {
 
     .imagen-container {
       width: 60%;
-      padding: 1.5rem 0 1.5rem 1.5rem;
+      padding: 0;
       display: flex;
       justify-content: flex-end;
       max-width: 500px;
+      max-height: 450px;
       @media (max-width:990px) {
         padding:0;
         width: 100%;
@@ -617,6 +624,7 @@ section {
       padding: 1rem 3rem;
       box-shadow: 4px 4px 7px #2323237a;
       max-width: 500px;
+      min-height: 500px;
 
       @media (max-width:990px) {
         width: 100%;

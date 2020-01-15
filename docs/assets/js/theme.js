@@ -132,7 +132,7 @@ $(document).ready(function() {
   });
 
   $('.slick-carousel-trayectoria').slick({
-    centerMode: true,
+    centerMode: false,
     centerPadding: '0px',
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -147,7 +147,6 @@ $(document).ready(function() {
         breakpoint: 990,
         settings: {
           arrows: true,
-          centerMode: true,
           centerPadding: '0px',
           slidesToShow: 1,
         },
@@ -156,7 +155,6 @@ $(document).ready(function() {
         breakpoint: 778,
         settings: {
           arrows: false,
-          centerMode: true,
           centerPadding: '0px',
           slidesToShow: 1,
         },

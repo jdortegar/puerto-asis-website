@@ -10038,8 +10038,8 @@ section {
           padding: initial; } }
     .Section-5 .container-carousel .carousel-position {
       position: absolute;
-      bottom: 100px;
-      right: 20%;
+      bottom: 35px;
+      right: 30%;
       font-family: starling, serif;
       font-size: 1.5rem;
       display: -webkit-box;
@@ -10054,8 +10054,9 @@ section {
       @media (max-width: 990px) {
         .Section-5 .container-carousel .carousel-position {
           bottom: initial;
-          -webkit-transform: translateX(-50%);
-                  transform: translateX(-50%); } }
+          right: 50%;
+          -webkit-transform: translateX(50%);
+                  transform: translateX(50%); } }
       .Section-5 .container-carousel .carousel-position span,
       .Section-5 .container-carousel .carousel-position sub {
         font-family: starling, serif; }
@@ -10081,6 +10082,8 @@ section {
     @media (max-width: 990px) {
       .Section-5 .slick-track .slick-slide {
         padding: 30px; } }
+  .Section-5 .slick-box {
+    padding: 0 130px; }
   .Section-5 .slick-arrow {
     position: absolute;
     top: 50%;
@@ -10113,10 +10116,15 @@ section {
     display: -ms-flexbox;
     display: flex;
     margin: auto;
-    padding: 0 20%;
+    padding: 0;
     -webkit-box-align: center;
         -ms-flex-align: center;
-            align-items: center; }
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-transform: translateX(-25px);
+            transform: translateX(-25px); }
     .Section-5 .trayectoria-box p {
       font-size: 1rem; }
     .Section-5 .trayectoria-box img {
@@ -10133,14 +10141,15 @@ section {
         padding: 0; } }
     .Section-5 .trayectoria-box .imagen-container {
       width: 60%;
-      padding: 1.5rem 0 1.5rem 1.5rem;
+      padding: 0;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
       -webkit-box-pack: end;
           -ms-flex-pack: end;
               justify-content: flex-end;
-      max-width: 500px; }
+      max-width: 500px;
+      max-height: 450px; }
       @media (max-width: 990px) {
         .Section-5 .trayectoria-box .imagen-container {
           padding: 0;
@@ -10151,7 +10160,8 @@ section {
       padding: 1rem 3rem;
       -webkit-box-shadow: 4px 4px 7px #2323237a;
               box-shadow: 4px 4px 7px #2323237a;
-      max-width: 500px; }
+      max-width: 500px;
+      min-height: 500px; }
       @media (max-width: 990px) {
         .Section-5 .trayectoria-box .text-container {
           width: 100%; } }
