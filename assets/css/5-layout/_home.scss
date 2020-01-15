@@ -37,10 +37,10 @@ section {
   }
 
   .container-wrapper {
-    padding: 7rem 15% 0;
+    padding: 2rem 15% 0;
 
     @media (max-width:990px) {
-      padding: 7rem 5%;
+      padding: 3rem 5%;
     }
   }
 
@@ -51,26 +51,26 @@ section {
 
   .ribbon-container {
     position: relative;
-    padding: 15% 12% 15% 18%;
+    padding: 8%;
+    @media (max-width:375px) {
+      padding: 0
+    }
 
     .ribbon {
-      position: absolute;
       width: 100%;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
       z-index: 99;
-      @media (max-width:990px) {
-        width: 60%;
-      }
     }
 
     .carousel {
+      position: absolute;
       z-index: 999;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
 
       @media (max-width:990px) {
         font-size: 19px;
-        width: 60%;
+        width: 50%;
         margin: auto;
       }
 
@@ -101,8 +101,10 @@ section {
       }
 
       .carousel-indicators {
-        bottom: -150px;
-        left: -40px;
+        bottom: -170px;
+        @media (max-width:990px) {
+          bottom: -100px;
+        }
       }
 
       .carousel-item .text-container{
@@ -121,12 +123,15 @@ section {
       line-height: 2rem;
 
       @media screen and (max-width: 1868px) {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
       }
 
 
       @media screen and (max-width: 1366px) {
-        font-size: 1rem;
+        font-size: .9rem;
+      }
+      @media screen and (max-width: 375px) {
+      font-size: .75rem;
       }
 
     }
@@ -169,10 +174,6 @@ section {
     @media (min-width:990px) {
       width: 80%;
       margin: auto;
-      position: absolute;
-      top: calc(50% + 6.25rem);
-      left: 50%;
-      transform: translate(-50%, -50%);
     }
   }
 
@@ -582,6 +583,10 @@ section {
     padding: 0 20%;
     align-items: center;
 
+    p{
+      font-size: 1rem;
+    }
+
     img{
       margin: 0;
         @media (max-width:990px) {
@@ -599,6 +604,7 @@ section {
       padding: 1.5rem 0 1.5rem 1.5rem;
       display: flex;
       justify-content: flex-end;
+      max-width: 500px;
       @media (max-width:990px) {
         padding:0;
         width: 100%;
@@ -610,6 +616,7 @@ section {
       width: 40%;
       padding: 1rem 3rem;
       box-shadow: 4px 4px 7px #2323237a;
+      max-width: 500px;
 
       @media (max-width:990px) {
         width: 100%;

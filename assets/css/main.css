@@ -9594,6 +9594,10 @@ p {
   .hide-desktop {
     display: none; } }
 
+@media (max-width: 990px) {
+  .hide-mobile {
+    display: none; } }
+
 header .main-navigation {
   min-height: 80px;
   background: #fff;
@@ -9604,7 +9608,7 @@ header .main-navigation {
     font-size: 1.5625rem; }
     @media screen and (max-width: 1868px) {
       header .main-navigation .nav-link {
-        font-size: 1rem; } }
+        font-size: .9rem; } }
 
 header .logo {
   width: 20rem; }
@@ -9674,33 +9678,33 @@ section {
       margin: 50px;
       text-align: center; } }
   .Section-1 .container-wrapper {
-    padding: 7rem 15% 0; }
+    padding: 2rem 15% 0; }
     @media (max-width: 990px) {
       .Section-1 .container-wrapper {
-        padding: 7rem 5%; } }
+        padding: 3rem 5%; } }
   .Section-1 .ribbon-back {
     background: url(/assets/img/img-ribbon.png) center center;
     background-size: cover; }
   .Section-1 .ribbon-container {
     position: relative;
-    padding: 15% 12% 15% 18%; }
+    padding: 8%; }
+    @media (max-width: 375px) {
+      .Section-1 .ribbon-container {
+        padding: 0; } }
     .Section-1 .ribbon-container .ribbon {
-      position: absolute;
       width: 100%;
+      z-index: 99; }
+    .Section-1 .ribbon-container .carousel {
+      position: absolute;
+      z-index: 999;
       top: 50%;
       left: 50%;
       -webkit-transform: translate(-50%, -50%);
-              transform: translate(-50%, -50%);
-      z-index: 99; }
-      @media (max-width: 990px) {
-        .Section-1 .ribbon-container .ribbon {
-          width: 60%; } }
-    .Section-1 .ribbon-container .carousel {
-      z-index: 999; }
+              transform: translate(-50%, -50%); }
       @media (max-width: 990px) {
         .Section-1 .ribbon-container .carousel {
           font-size: 19px;
-          width: 60%;
+          width: 50%;
           margin: auto; } }
       .Section-1 .ribbon-container .carousel::before {
         content: "";
@@ -9722,8 +9726,10 @@ section {
         .Section-1 .ribbon-container .carousel .carousel-indicators li.active {
           background: #bc2e1a; }
       .Section-1 .ribbon-container .carousel .carousel-indicators {
-        bottom: -150px;
-        left: -40px; }
+        bottom: -170px; }
+        @media (max-width: 990px) {
+          .Section-1 .ribbon-container .carousel .carousel-indicators {
+            bottom: -100px; } }
       .Section-1 .ribbon-container .carousel .carousel-item .text-container {
         min-height: 220px;
         display: -webkit-box;
@@ -9740,10 +9746,13 @@ section {
       line-height: 2rem; }
       @media screen and (max-width: 1868px) {
         .Section-1 .ribbon-container h3 {
-          font-size: 1.5rem; } }
+          font-size: 1.25rem; } }
       @media screen and (max-width: 1366px) {
         .Section-1 .ribbon-container h3 {
-          font-size: 1rem; } }
+          font-size: .9rem; } }
+      @media screen and (max-width: 375px) {
+        .Section-1 .ribbon-container h3 {
+          font-size: .75rem; } }
     .Section-1 .ribbon-container .firstLetter {
       font-size: 1.75rem;
       font-family: starling, serif; }
@@ -9778,12 +9787,7 @@ section {
     @media (min-width: 990px) {
       .Section-2 .container-carousel {
         width: 80%;
-        margin: auto;
-        position: absolute;
-        top: calc(50% + 6.25rem);
-        left: 50%;
-        -webkit-transform: translate(-50%, -50%);
-                transform: translate(-50%, -50%); } }
+        margin: auto; } }
   .Section-2 .slick-center .trayectoria-box {
     -webkit-transform: scale(1.2);
             transform: scale(1.2); }
@@ -10113,6 +10117,8 @@ section {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
+    .Section-5 .trayectoria-box p {
+      font-size: 1rem; }
     .Section-5 .trayectoria-box img {
       margin: 0; }
       @media (max-width: 990px) {
@@ -10133,7 +10139,8 @@ section {
       display: flex;
       -webkit-box-pack: end;
           -ms-flex-pack: end;
-              justify-content: flex-end; }
+              justify-content: flex-end;
+      max-width: 500px; }
       @media (max-width: 990px) {
         .Section-5 .trayectoria-box .imagen-container {
           padding: 0;
@@ -10143,7 +10150,8 @@ section {
       width: 40%;
       padding: 1rem 3rem;
       -webkit-box-shadow: 4px 4px 7px #2323237a;
-              box-shadow: 4px 4px 7px #2323237a; }
+              box-shadow: 4px 4px 7px #2323237a;
+      max-width: 500px; }
       @media (max-width: 990px) {
         .Section-5 .trayectoria-box .text-container {
           width: 100%; } }

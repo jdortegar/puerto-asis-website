@@ -119,6 +119,15 @@ $(document).ready(function() {
           centerPadding: '0px',
         },
       },
+      {
+        breakpoint: 500,
+        settings: {         
+          slidesToShow: 1,
+          arrows: false,
+          centerMode: true,
+          centerPadding: '0px',
+        },
+      },
     ],
   });
 
@@ -136,6 +145,15 @@ $(document).ready(function() {
     responsive: [
       {
         breakpoint: 990,
+        settings: {
+          arrows: true,
+          centerMode: true,
+          centerPadding: '0px',
+          slidesToShow: 1,
+        },
+      },
+      {
+        breakpoint: 778,
         settings: {
           arrows: false,
           centerMode: true,
