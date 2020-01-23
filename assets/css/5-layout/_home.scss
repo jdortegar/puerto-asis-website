@@ -10,10 +10,10 @@ section {
 
 .center-content {
   @media (min-width:990px) {
-  position: absolute;
-  top: calc(50% + 6.25rem);
-  left: 50%;
-  transform: translate(-50%, -50%);
+    position: absolute;
+    top: calc(50% + 6.25rem);
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
 
@@ -52,6 +52,7 @@ section {
   .ribbon-container {
     position: relative;
     padding: 8%;
+
     @media (max-width:375px) {
       padding: 0
     }
@@ -101,13 +102,14 @@ section {
       }
 
       .carousel-indicators {
-        bottom: -170px;
+        bottom: -50px;
+
         @media (max-width:990px) {
           bottom: -100px;
         }
       }
 
-      .carousel-item .text-container{
+      .carousel-item .text-container {
         min-height: 220px;
         display: flex;
         align-items: center;
@@ -130,8 +132,9 @@ section {
       @media screen and (max-width: 1366px) {
         font-size: .9rem;
       }
+
       @media screen and (max-width: 375px) {
-      font-size: .75rem;
+        font-size: .75rem;
       }
 
     }
@@ -139,6 +142,7 @@ section {
     .firstLetter {
       font-size: 1.75rem;
       font-family: starling, serif;
+
       @media (max-width:990px) {
         font-size: 1.25rem;
       }
@@ -159,18 +163,19 @@ section {
     align-items: center;
     justify-content: center;
 
-        
-    &>div{
+
+    &>div {
       width: 100%;
-      padding: 10%;
+      padding: 5%;
     }
-    
+
   }
 
   .container-carousel {
     width: 100%;
     margin: auto;
     position: relative;
+
     @media (min-width:990px) {
       width: 80%;
       margin: auto;
@@ -180,6 +185,7 @@ section {
   .slick-center {
     .trayectoria-box {
       transform: scale(1.2);
+
       @media (max-width:990px) {
         transform: scale(1);
         margin: auto;
@@ -201,6 +207,7 @@ section {
 
     &.prevArrow {
       left: -5rem;
+
       @media (max-width:990px) {
         left: 1rem;
       }
@@ -212,6 +219,7 @@ section {
       }
 
       right: -5rem;
+
       @media (max-width:990px) {
         right: 1rem;
       }
@@ -239,7 +247,7 @@ section {
     }
 
     @media (max-width:990px) {
-      width:auto;
+      width: auto;
       height: auto;
     }
 
@@ -248,7 +256,7 @@ section {
       // top: 50%;
       // left: 50%;
       // transform: translate(-50%, -50%);
-      width: 80%;
+      width: 100%;
 
       @media (max-width:990px) {
         position: relative;
@@ -262,6 +270,7 @@ section {
         font-family: starling, serif;
         font-size: 1.5rem;
         font-weight: 700;
+
         @media (max-width:1520px) {
           font-size: 1.25rem;
 
@@ -326,6 +335,7 @@ section {
       position: absolute;
       left: 4.5rem;
       top: 1.5rem;
+
       @media (max-width:990px) {
         position: relative;
         left: initial;
@@ -362,6 +372,7 @@ section {
       align-items: center;
       justify-content: center;
       background: #fff;
+
       @media (max-width:990px) {
         max-width: 244px;
       }
@@ -378,6 +389,7 @@ section {
       font-size: 1.25rem;
       font-family: starling, serif;
       font-weight: 700;
+
       @media (max-width:990px) {
         min-height: 244px;
       }
@@ -395,6 +407,7 @@ section {
       width: 80%;
       text-shadow: 1px 1px #000;
       display: none;
+
       @media (max-width:990px) {
         bottom: 2rem;
       }
@@ -412,6 +425,7 @@ section {
       border: 1px solid $red-color;
       padding: 1.2725rem 1rem;
       font-weight: 300;
+
       @media (max-width:990px) {
         padding: 2.6rem 1rem;
       }
@@ -494,6 +508,7 @@ section {
 
     .slick-list {
       padding: 1rem !important;
+
       @media (max-width:990px) {
         padding: initial;
       }
@@ -543,12 +558,13 @@ section {
     height: auto;
     align-items: center;
     justify-content: center;
+
     @media (max-width:990px) {
       padding: 30px;
     }
   }
 
-  .slick-box{
+  .slick-box {
     padding: 0 130px;
   }
 
@@ -589,20 +605,23 @@ section {
     align-items: center;
     justify-content: center;
     transform: translateX(-25px);
-    p{
+
+    p {
       font-size: 1rem;
     }
 
-    img{
+    img {
       margin: 0;
-        @media (max-width:990px) {
-        margin:auto;
-        }
+
+      @media (max-width:990px) {
+        margin: auto;
+      }
     }
+
     @media (max-width:990px) {
       flex-direction: column;
       padding: 0;
-      
+
     }
 
     .imagen-container {
@@ -612,8 +631,9 @@ section {
       justify-content: flex-end;
       max-width: 500px;
       max-height: 450px;
+
       @media (max-width:990px) {
-        padding:0;
+        padding: 0;
         width: 100%;
       }
     }

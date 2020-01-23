@@ -9726,7 +9726,7 @@ section {
         .Section-1 .ribbon-container .carousel .carousel-indicators li.active {
           background: #bc2e1a; }
       .Section-1 .ribbon-container .carousel .carousel-indicators {
-        bottom: -170px; }
+        bottom: -50px; }
         @media (max-width: 990px) {
           .Section-1 .ribbon-container .carousel .carousel-indicators {
             bottom: -100px; } }
@@ -9779,7 +9779,7 @@ section {
             justify-content: center; }
     .Section-2 .slick-track .slick-slide > div {
       width: 100%;
-      padding: 10%; }
+      padding: 5%; }
   .Section-2 .container-carousel {
     width: 100%;
     margin: auto;
@@ -9840,7 +9840,7 @@ section {
         width: auto;
         height: auto; } }
     .Section-2 .trayectoria-box .text-container {
-      width: 80%; }
+      width: 100%; }
       @media (max-width: 990px) {
         .Section-2 .trayectoria-box .text-container {
           position: relative;
